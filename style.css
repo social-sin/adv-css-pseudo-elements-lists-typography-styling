@@ -1,17 +1,9 @@
 /* =========================
-   ROOT TYPOGRAPHY
-========================= */
-
-html {
-  font-size: 16px;
-}
-
-/* =========================
    GLOBAL STYLES
 ========================= */
 
 body {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 
   background-color: #fef6e4;
   color: #172c66;
@@ -23,25 +15,24 @@ body {
 }
 
 /* =========================
-   HERO SECTION
+   TYPOGRAPHY
 ========================= */
 
-.hero {
-  text-align: center;
-  margin-bottom: 3rem;
+h1,
+h2 {
+  color: green;
 }
 
 h1 {
-  color: green;
-
-  font-size: clamp(2rem, 6vw, 5rem);
-
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
-.hero-text {
+.intro {
+  text-align: center;
+
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 /* =========================
@@ -59,121 +50,204 @@ h1 {
 }
 
 /* =========================
-   HEADINGS
+   BEFORE + AFTER
 ========================= */
 
-h2 {
-  color: green;
-  margin-bottom: 1rem;
+.featured-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.featured-title::before {
+  content: "★ ";
+
+  color: gold;
+}
+
+.featured-title::after {
+  content: " ★";
+
+  color: gold;
 }
 
 /* =========================
-   FONT FAMILY
+   BLOCKQUOTE
 ========================= */
 
-.sans {
-  font-family: Arial, Helvetica, sans-serif;
-}
+blockquote {
+  font-size: 1.5rem;
 
-.serif {
-  font-family: Georgia, "Times New Roman", serif;
-}
+  max-width: 700px;
+  margin: 0 auto;
 
-.mono {
-  font-family: "Courier New", monospace;
-}
+  position: relative;
 
-/* =========================
-   FONT WEIGHT
-========================= */
+  padding: 20px 40px;
 
-.thin {
-  font-weight: 100;
-}
-
-.regular {
-  font-weight: 400;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.black {
-  font-weight: 900;
-}
-
-/* =========================
-   FONT STYLE
-========================= */
-
-.normal-style {
-  font-style: normal;
-}
-
-.italic-style {
   font-style: italic;
 }
 
-.oblique-style {
-  font-style: oblique;
+blockquote::before {
+  content: open-quote;
+
+  font-size: 4rem;
+
+  color: #cccccc;
+
+  position: absolute;
+
+  left: 0;
+  top: -10px;
+}
+
+blockquote::after {
+  content: close-quote;
+
+  font-size: 4rem;
+
+  color: #cccccc;
+
+  position: absolute;
+
+  right: 0;
+  bottom: -40px;
 }
 
 /* =========================
-   RESPONSIVE TYPOGRAPHY
+   TYPOGRAPHIC DIVIDER
 ========================= */
 
-.responsive-heading {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 40px;
+  height: 2px;
+
+  background: black;
+
+  margin: 0 10px;
+
+  vertical-align: middle;
+}
+
+/* =========================
+   CUSTOM LIST
+========================= */
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  margin-bottom: 1rem;
+}
+
+.custom-list li::before {
+  content: "➤";
+
+  color: #333;
+
+  margin-right: 10px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   MARKER PSEUDO-ELEMENT
+========================= */
+
+.marker-list {
+  padding-left: 2rem;
+}
+
+.marker-list li::marker {
+  content: "◆ ";
 
   color: crimson;
+
+  font-size: 1.2em;
 }
 
 /* =========================
-   READABILITY
+   TIMELINE
 ========================= */
 
-.readability {
-  line-height: 1.9;
+.timeline {
+  position: relative;
 
-  letter-spacing: 0.05em;
+  list-style: none;
 
-  max-width: 700px;
+  padding-left: 20px;
+}
+
+.timeline li {
+  position: relative;
+
+  margin-bottom: 1.5rem;
+
+  padding-left: 20px;
+}
+
+.timeline li::before {
+  content: "";
+
+  position: absolute;
+
+  left: -10px;
+  top: 8px;
+
+  width: 10px;
+  height: 10px;
+
+  background: black;
+
+  border-radius: 50%;
 }
 
 /* =========================
-   SHORTHAND FONT
+   OVERLAY EFFECT
 ========================= */
 
-.shorthand {
-  font: italic 400 1.2rem/1.8 "Roboto", sans-serif;
+.overlay-box {
+  position: relative;
+
+  width: 300px;
+  height: 120px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border: 3px solid #172c66;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  overflow: hidden;
 }
 
-/* =========================
-   SYSTEM FONT STACK
-========================= */
+.overlay-box::before {
+  content: "";
 
-.system-font {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-}
+  position: absolute;
 
-/* =========================
-   ADVANCED FEATURES
-========================= */
+  width: 120%;
+  height: 120%;
 
-.small-caps {
-  font-variant: small-caps;
+  background: rgba(0, 128, 0, 0.15);
 
-  letter-spacing: 0.08em;
-}
-
-.ligatures {
-  font-feature-settings: "liga" 1;
-
-  font-size: 1.3rem;
+  transform: rotate(-8deg);
 }
