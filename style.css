@@ -1,0 +1,179 @@
+/* =========================
+   ROOT TYPOGRAPHY
+========================= */
+
+html {
+  font-size: 16px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+
+  background-color: #fef6e4;
+  color: #172c66;
+
+  margin: 0;
+  padding: 40px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  color: green;
+
+  font-size: clamp(2rem, 6vw, 5rem);
+
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CARD LAYOUT
+========================= */
+
+.card {
+  background-color: white;
+
+  padding: 30px;
+  margin-bottom: 30px;
+
+  border: 3px solid #172c66;
+  border-radius: 12px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+  color: green;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   FONT FAMILY
+========================= */
+
+.sans {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.mono {
+  font-family: "Courier New", monospace;
+}
+
+/* =========================
+   FONT WEIGHT
+========================= */
+
+.thin {
+  font-weight: 100;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
+}
+
+/* =========================
+   FONT STYLE
+========================= */
+
+.normal-style {
+  font-style: normal;
+}
+
+.italic-style {
+  font-style: italic;
+}
+
+.oblique-style {
+  font-style: oblique;
+}
+
+/* =========================
+   RESPONSIVE TYPOGRAPHY
+========================= */
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+
+  color: crimson;
+}
+
+/* =========================
+   READABILITY
+========================= */
+
+.readability {
+  line-height: 1.9;
+
+  letter-spacing: 0.05em;
+
+  max-width: 700px;
+}
+
+/* =========================
+   SHORTHAND FONT
+========================= */
+
+.shorthand {
+  font: italic 400 1.2rem/1.8 "Roboto", sans-serif;
+}
+
+/* =========================
+   SYSTEM FONT STACK
+========================= */
+
+.system-font {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   ADVANCED FEATURES
+========================= */
+
+.small-caps {
+  font-variant: small-caps;
+
+  letter-spacing: 0.08em;
+}
+
+.ligatures {
+  font-feature-settings: "liga" 1;
+
+  font-size: 1.3rem;
+}
